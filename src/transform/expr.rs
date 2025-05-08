@@ -458,6 +458,7 @@ impl Transform for FunctionCallTransformer {
         .iter()
         .map(|arg| arg.transform_value(Context::Borrowed(&context), input))
         .collect::<Result<Vec<_>>>()?,
+        input,
     )
   }
 }
